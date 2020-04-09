@@ -1,0 +1,60 @@
+[
+	{
+		"city": "Mumbai, Maharashtra",
+		"coach": "Mahela Jaywardene",
+		"home": "Wankhede Stadium, Mumbai",
+		"team": "Mumbai Indians",
+		"label": "MI",
+		"players": [
+			{
+				"player": "Rohit Sharma (R)",
+				"price": 150000000,
+				"role": "Batsman"
+			},
+			{
+				"player": "Ishan Kishan (R)",
+				"price": 62000000,
+				"role": "Wicket Keeper"
+			},
+			{
+				"player": "Digvijay Deshmukh",
+				"price": 2000000,
+				"role": "All-Rounder"
+			},
+			{
+				"player": "Dhawal Kulkarni (R)",
+				"price": 7500000,
+				"role": "Bowler"
+			}
+		]
+	},
+	{
+		"city": "Delhi, NCR",
+		"coach": "Ricky Ponting",
+		"home": "Feroz Shah Kotla Ground",
+		"team": "Delhi Capitals",
+		"label": "DC",
+		"players": [
+			{
+				"player": "Shreyas Iyer (R)",
+				"price": 70000000,
+				"role": "Batsman"
+			},
+			{
+				"player": "Rishabh Pant (R)",
+				"price": 150000000,
+				"role": "Wicket Keeper"
+			},
+			{
+				"player": "Chris Woakes",
+				"price": 15000000,
+				"role": "All-Rounder"
+			},
+			{
+				"player": "Ravichandran Ashwin (R)",
+				"price": 76000000,
+				"role": "Bowler"
+			}
+		]
+	}
+]
