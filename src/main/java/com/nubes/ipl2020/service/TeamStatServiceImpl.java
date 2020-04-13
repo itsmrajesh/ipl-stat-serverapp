@@ -66,7 +66,7 @@ public class TeamStatServiceImpl implements TeamStatService {
 			throw new TeamNotFoundException(String.format("Team with given label %s is not found", teamLabel));
 		}
 		List<PlayerDTO> players = teamStatDao.getPlayersByTeamAndRole(teamLabel, role);
-		LOG.info("Total players for Team :{}  and team: {} is {}", teamLabel, role, players.size());
+		LOG.info("Total players for Team :{}  and Role: {} is {}", teamLabel, role, players.size());
 		return players;
 	}
 

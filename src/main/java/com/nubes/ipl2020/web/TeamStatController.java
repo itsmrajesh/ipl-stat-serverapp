@@ -54,7 +54,7 @@ public class TeamStatController {
 	}
 
 	@GetMapping("{team}/{role}")
-	public List<PlayerDTO> playersByTeamAndRole(String teamLabel, String role) {
+	public List<PlayerDTO> playersByTeamAndRole(@PathVariable("team") String teamLabel,@PathVariable("role") String role) {
 		try {
 			List<PlayerDTO> playersByRole = teamStatService.getPlayersByTeamAndRole(teamLabel, role);
 			return playersByRole;
