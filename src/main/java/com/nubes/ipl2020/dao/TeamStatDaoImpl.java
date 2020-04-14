@@ -22,6 +22,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 import com.nubes.ipl2020.dto.MaxAmountPlayerByRoleDTO;
 import com.nubes.ipl2020.dto.PlayerDTO;
+import com.nubes.ipl2020.dto.RoleAmountDTO;
 import com.nubes.ipl2020.dto.RoleCountDTO;
 import com.nubes.ipl2020.dto.TeamAmountDTO;
 import com.nubes.ipl2020.dto.TeamDTO;
@@ -168,6 +169,19 @@ public class TeamStatDaoImpl implements TeamStatDao {
 		List<PlayerDTO> playersList = res.getMappedResults();
 		LOG.info("Search Mathched players count : {}", playersList.size());
 		return playersList;
+	}
+	
+	@Override
+	public List<RoleAmountDTO> getRoleAmountTeam(String teamLabel) {
+		Aggregation aggr = newAggregation(
+				unwind("players"),
+				match(Criteria.where("label").is(teamLabel)),
+				group("players.role").sum("players.price").as("amount"),
+				project().and("_id").as("roleName").and("amount").as("amount").andExclude("_id"));
+		AggregationResults<RoleAmountDTO> res = mongoOperations.aggregate(aggr, "team", RoleAmountDTO.class);
+		List<RoleAmountDTO> roleAmountList = res.getMappedResults();
+		LOG.info("Search Matched players count : {}", roleAmountList.size());
+		return roleAmountList;
 	}
 
 }

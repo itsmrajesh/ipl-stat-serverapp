@@ -8,6 +8,7 @@ import org.springframework.util.Assert;
 import com.nubes.ipl2020.dao.TeamStatDao;
 import com.nubes.ipl2020.dto.MaxAmountPlayerByRoleDTO;
 import com.nubes.ipl2020.dto.PlayerDTO;
+import com.nubes.ipl2020.dto.RoleAmountDTO;
 import com.nubes.ipl2020.dto.RoleCountDTO;
 import com.nubes.ipl2020.dto.TeamAmountDTO;
 import com.nubes.ipl2020.dto.TeamDTO;
@@ -107,6 +108,13 @@ public class TeamStatServiceImpl implements TeamStatService {
 		LOG.info("Players count:{} for search string:{}", players.size(), name);
 		return players;
 
+	}
+	
+	@Override
+	public List<RoleAmountDTO> getRoleAmountTeam(String teamLabel) {
+		Assert.notNull(teamLabel, "Team label can't be empty");
+		List<RoleAmountDTO> roleAmount = teamStatDao.getRoleAmountTeam(teamLabel);
+		return roleAmount;
 	}
 
 }
