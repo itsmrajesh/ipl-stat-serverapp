@@ -87,8 +87,8 @@ public class TeamStatServiceImpl implements TeamStatService {
 	}
 
 	@Override
-	public List<MaxAmountPlayerByRoleDTO> getMaxAountPlayerByRole() {
-		List<MaxAmountPlayerByRoleDTO> amountByRoleList = teamStatDao.getMaxAountPlayerByRole();
+	public List<MaxAmountPlayerByRoleDTO> getMaxAmountPlayerByRole() {
+		List<MaxAmountPlayerByRoleDTO> amountByRoleList = teamStatDao.getMaxAmountPlayerByRole();
 		LOG.info("Max amount by role size:{}", amountByRoleList.size());
 		return amountByRoleList;
 

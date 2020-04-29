@@ -113,7 +113,7 @@ public class TeamStatDaoImpl implements TeamStatDao {
 	}
 
 	@Override
-	public List<MaxAmountPlayerByRoleDTO> getMaxAountPlayerByRole() {
+	public List<MaxAmountPlayerByRoleDTO> getMaxAmountPlayerByRole() {
 		
 		Document obj = new Document();
 		obj.put("name", "$players.player");

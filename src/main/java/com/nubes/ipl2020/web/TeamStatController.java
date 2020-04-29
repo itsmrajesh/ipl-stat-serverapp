@@ -77,9 +77,9 @@ public class TeamStatController {
 		return teamAmount;
 	}
 
-	@GetMapping("/maxamoutbyrole")
+	@GetMapping("/maxamountbyrole")
 	public List<MaxAmountPlayerByRoleDTO> maxAountPlayerByRole() {
-		List<MaxAmountPlayerByRoleDTO> maxAmountByRole = teamStatService.getMaxAountPlayerByRole();
+		List<MaxAmountPlayerByRoleDTO> maxAmountByRole = teamStatService.getMaxAmountPlayerByRole();
 		return maxAmountByRole;
 	}
 

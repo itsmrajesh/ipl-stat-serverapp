@@ -18,7 +18,7 @@ public interface TeamStatService {
 	public List<PlayerDTO> getPlayersByTeamAndRole(String teamLabel,String role) ;
 	public List<TeamDTO> getTeamDetails();
 	public List<TeamAmountDTO> getTotalAmountByTeam();
-	public List<MaxAmountPlayerByRoleDTO> getMaxAountPlayerByRole();
+	public List<MaxAmountPlayerByRoleDTO> getMaxAmountPlayerByRole();
 	public List<PlayerDTO> getAllPlayers();
 	public List<PlayerDTO> search(String name);
 	List<RoleAmountDTO> getRoleAmountTeam(String teamLabel);
